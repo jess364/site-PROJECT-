@@ -1,0 +1,819 @@
+
+body {
+    font-family: 'Zen Old Mincho', 'Noto Sans JP', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.8;
+    word-break: break-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h1, h2, h3 {
+    color: #222;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: 3.8em;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+p, ul {
+    margin-bottom: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.golden-accent {
+    color: #A08851;
+    font-weight: 700;
+}
+
+/*
+ * ボタン
+ * - メインボタンの共通スタイル
+ */
+.btn-main {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 20px 45px;
+    background: linear-gradient(135deg, #DAA520, #A08851);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.05em;
+}
+
+.btn-main:hover {
+    background: linear-gradient(135deg, #B8860B, #8B7340);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/*
+ * ヘッダー（ファーストビュー）
+ */
+.header {
+    background-image: url('https://via.placeholder.com/1920x1080/404040/FFFFFF?text=High+Quality+Main+Visual');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 120px 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+}
+
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    max-width: 900px;
+}
+
+.header-sub-text {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    letter-spacing: 0.1em;
+}
+
+.header h1, .header h2 {
+    color: #fff;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.header h1 {
+    font-size: 4.5em;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.header .cta-line {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #FFD700;
+    margin-bottom: 50px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header .btn-main {
+    margin-top: 60px;
+}
+
+.section {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.section:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.section:nth-of-type(even) {
+    background-color: #f5f5f5;
+}
+
+.card-container {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 60px;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.card-container h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*
+ * お悩みセクション (problem)
+ */
+.problem .problem-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.problem-card {
+    background-color: #fdfdfd;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 280px;
+    max-width: 31%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #A08851;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.problem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.problem-card p {
+    font-size: 1.15em;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/*
+ * 初回相談セクション (consultation-intro)
+ */
+.consultation-intro .consultation-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.consultation-card {
+    background-color: #fdfdfd;
+    padding: 35px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 280px;
+    max-width: 31%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #A08851;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.consultation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.consultation-card h3 {
+    font-size: 1.35em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.consultation-card p {
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/*
+ * 離婚のリスクセクション (divorce-risks)
+ */
+.divorce-risks .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: stretch;
+    background-color: #555;
+}
+
+.divorce-risks .risk-item {
+    background-color: #fdfdfd;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 320px;
+    max-width: 48%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #A08851;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.divorce-risks .risk-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.divorce-risks .risk-item h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.divorce-risks .risk-item ul {
+    margin-top: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.divorce-risks .risk-item ul li {
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.divorce-risks .risk-item ul li::before {
+    content: "・";
+    color: #A08851;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+}
+
+/*
+ * 選ばれている理由セクション (reasons)
+ */
+.reasons .reasons-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.reason-card {
+    background-color: #fdfdfd;
+    padding: 35px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #A08851;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.reason-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.reason-card h3 {
+    font-size: 1.35em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.reason-card h3 .golden-accent {
+    font-size: 1.1em;
+    margin-right: 8px;
+}
+
+.reason-card p {
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/*
+ * お客様の声セクション (testimonials)
+ */
+.testimonials .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.testimonial-card {
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 250px;
+    max-width: 23%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 3px solid #A08851;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/*
+ * LINE登録セクション (line-promo)
+ */
+.line-promo {
+    background-color: #222;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.line-promo .card-container {
+    background-color: #222;
+    box-shadow: none;
+    border: none;
+    padding-bottom: 20px;
+}
+
+.line-promo-image {
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto 30px auto;
+    display: block;
+}
+
+.line-promo h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.line-promo h1 {
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.line-promo h1 span {
+    color: #FFD700;
+}
+
+.line-promo p {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.line-promo .btn-main {
+    background-color: #06C755;
+    background-image: none;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 199, 85, 0.4);
+}
+
+.line-promo .btn-main:hover {
+    background-color: #05AB4C;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 199, 85, 0.5);
+}
+
+/*
+ * よくある質問セクション (faq)
+ */
+.faq .faq-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.faq-card {
+    background-color: #fdfdfd;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #A08851;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.faq-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.faq-card .faq-question {
+    font-size: 1.25em;
+    color: #A08851;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    padding-left: 35px;
+    line-height: 1.5;
+}
+
+.faq-card .faq-question::before {
+    content: "Q.";
+    color: #A08851;
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+    top: 0;
+}
+
+.faq-card .faq-answer {
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 0;
+    position: relative;
+    padding-left: 35px;
+}
+
+.faq-card .faq-answer::before {
+    content: "A.";
+    color: #555;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    font-size: 1.0em;
+    top: 0;
+}
+
+/*
+ * フッター
+ */
+.footer {
+    background-color: #1a1a1a;
+    color: #eee;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer .btn-main-footer {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 40px auto;
+    padding: 20px 45px;
+    background: linear-gradient(135deg, #DAA520, #A08851);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.05em;
+}
+
+.footer .btn-main-footer:hover {
+    background: linear-gradient(135deg, #B8860B, #8B7340);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer-copy {
+    font-size: 0.95em;
+    color: #bbb;
+    margin-top: 25px;
+    letter-spacing: 0.02em;
+}
+
+/*
+ * レスポンシブ対応
+ */
+
+/* 1024px以下  */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    h2 {
+        font-size: 2.2em;
+    }
+    
+    .header {
+        padding: 100px 0;
+        min-height: 600px;
+    }
+    
+    .header h1 {
+        font-size: 3.8em;
+    }
+    
+    .header h2 {
+        font-size: 2.5em;
+    }
+    
+    .header .cta-line {
+        font-size: 1.6em;
+    }
+    
+    .btn-main {
+        padding: 18px 40px;
+        font-size: 1.2em;
+    }
+    
+    .section {
+        padding: 80px 0;
+    }
+    
+    .card-container {
+        padding: 40px;
+    }
+
+    /* カードを2列表示に調整 */
+    .problem-card,
+    .consultation-card {
+        max-width: 48%;
+    }
+    
+    .testimonial-card {
+        max-width: 48%;
+    }
+}
+
+/* 768px以下  */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.8em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    .header {
+        padding: 80px 0;
+        min-height: 500px;
+    }
+    
+    .header h1 {
+        font-size: 3em;
+    }
+    
+    .header h2 {
+        font-size: 2em;
+    }
+    
+    .header .cta-line {
+        font-size: 1.4em;
+    }
+    
+    .btn-main, .btn-main-footer {
+        width: 90%;
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .card-container {
+        padding: 30px;
+    }
+
+    /* カードを1列表示に */
+    .problem-card,
+    .consultation-card,
+    .divorce-risks .risk-item,
+    .reason-card,
+    .testimonial-card,
+    .faq-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .line-promo h2 {
+        font-size: 1.8em;
+    }
+    
+    .line-promo h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* 480px以下  */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    .header {
+        min-height: 400px;
+    }
+    
+    .header h1 {
+        font-size: 2.5em;
+    }
+    
+    .header h2 {
+        font-size: 1.5em;
+    }
+    
+    .header .cta-line {
+        font-size: 1.2em;
+    }
+    
+    .btn-main, .btn-main-footer {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+    
+    .card-container {
+        padding: 20px;
+    }
+    
+    .problem-card,
+    .consultation-card,
+    .divorce-risks .risk-item,
+    .reason-card,
+    .faq-card {
+        padding: 25px 20px;
+    }
+    
+    .line-promo h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* 375px以下  */
+@media (max-width: 375px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .header h1 {
+        font-size: 2.2em;
+    }
+    
+    .header h2 {
+        font-size: 1.3em;
+    }
+    
+    .header .cta-line {
+        font-size: 1.1em;
+    }
+    
+    .btn-main, .btn-main-footer {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .card-container {
+        padding: 15px;
+    }
+    
+    .line-promo h1 {
+        font-size: 2em;
+    }
+}
